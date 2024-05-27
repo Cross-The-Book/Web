@@ -1,0 +1,190 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* 헤더 스타일 */
+.header .main {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+/* 네비게이션 스타일 */
+.nav {
+    width: 100%;
+    height: 10%;
+    background: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.nav .menu_left {
+    float: left;
+    margin-left: 60px;
+}
+
+.nav .menu_right {
+    float: right;
+    margin-right: 60px;
+}
+
+.menu_item {
+    display: inline-block;
+    /* 각 메뉴 아이템 간격 설정 */
+    font-size: 1.3em;
+    margin: 0 80px;
+}
+
+.nav>hr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0px 3px 7px grey;
+}
+
+/* 섹션 스타일 */
+.section {
+    display: flex;
+    flex-direction: column;
+    /* 자식 요소들을 세로 방향으로 나열 */
+    align-items: center;
+    /* 가로 방향으로 중앙 정렬 */
+    padding: 20px;
+    margin-top: 60px;
+    /* 상단 여백 추가 */
+}
+
+#title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#title h1 {
+    /* float: left; 제거 */
+    margin-left: 300px;
+}
+
+#year-month-select {
+    /* float: right; 제거 */
+    margin-right: 300px;
+}
+
+
+.book-details>h2 {
+    margin-top: 20px;
+    margin-left: 370px;
+    /* 책 제목과 선택 상자 사이의 공간 */
+}
+
+.book-details>p {
+    font-size: 0.9em;
+    /* 작가 이름의 글씨 크기를 조금 더 작게 */
+    color: #666;
+    /* 글씨 색상 */
+    margin-left: 370px;
+}
+
+#book-image {
+    height: auto;
+    margin-top: 30px;
+    /* 이미지 비율 유지 */
+}
+
+/* hr{
+    margin-top: 20px;
+    border: 0;
+    height: 1px;
+    background-color: #ccc;
+} */
+
+.division {
+    margin-top: 40px;
+    border: 0;
+    height: 3px;
+    background-color: gray;
+    width: 55%;
+    /* 필요에 따라 폭 조정 */
+    margin: 20px auto;
+    /* 수평선을 가운데 정렬 */
+}
+
+#ad{
+    display: block;
+    width: 65%;
+    margin: 50px auto 20px auto; /* 상단에 50px 여백, 좌우 자동, 하단에는 여백 없음 */
+    white-space: pre-wrap; /* 줄바꿈과 공백을 유지 */
+    line-height: 1.5; /* 줄 간격 설정 */
+    text-align: center; /* 텍스트를 가운데 정렬 */
+    text-indent: 0;
+    padding-left: 0;
+}
+
+#plot{
+    display: block;
+    width: 50%;
+    margin: 50px auto 20px auto;
+    /* white-space:pre-wrap; */
+    line-height: 2.0;
+    text-indent: 0;
+    padding-left: 0;
+}
+
+.quotes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 세로 중심으로 정렬 */
+    gap: 20px; /* 박스 사이의 간격 */
+}
+
+.quote {
+    display: block;
+    width: 50%;
+    border: 2px dashed white; /* 흰색 점선 테두리 */
+    border-radius: 10px;
+    background-color: #424769;
+    color:white;
+    padding: 20px 20px; /* 내부 여백 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+.quote span{
+   color:#DDE6ED;
+   font-weight: bold;
+}
+
+#ad2{
+    display: block;
+    width: 50%;
+    padding: 20px 20px; /* 내부 여백 */
+    margin-top: 60px; /* 상단 여백 */
+}
+
+.author-intro {
+    border: 1px solid #ccc; /* 박스 테두리 */
+    width: 50%;
+    padding: 20px; /* 내부 여백 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+.author-photo {
+    display: block;
+    margin: 0 auto 20px; /* 사진 아래 여백 */
+    max-width: 200px; /* 사진 최대 너비 */
+    height: auto; /* 사진 높이 자동 조절 */
+}
+
+h2, h3 {
+    text-align: center; /* 제목 가운데 정렬 */
+}
+
+p {
+    text-align: justify; /* 문단 양쪽 정렬 */
+    line-height: 1.6; /* 줄 간격 */
+}
