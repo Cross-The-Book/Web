@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header-subtext-container {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px; 
+            gap: 10px; 
+        }
+        .content-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center; 
+        }
+        .main-section {
+            flex: 1 1 30%;
+            box-sizing: border-box;
+        }
+        .article {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .article-header {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .article-body {
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h1>베스트셀러</h1>
+        <div class="header-subtext-container">
+            <select id="year-select" onchange="updateSubtext()">
+                <option value="2024">2024년</option>
+                <option value="2023">2023년</option>
+                <option value="2022">2022년</option>
+            </select>
+            <select id="week-select" onchange="updateSubtext()">
+                <option value="5월 1주">5월 1주</option>
+                <option value="5월 2주">5월 2주</option>
+                <option value="5월 3주">5월 3주</option>
+                <option value="5월 4주">5월 4주</option>
+            </select>
+        </div>
+    </div>
+    <div id="content">
+        <div class="content-container">
+            <section class="main-section">
+                <article class="article">
+                    <div class="article-header">
+                        <h1 class="article-title">1. 나를 소모하지 않는 현명한 태도에 관하여</h1>
+                    </div>
+                    <div class="article-body">
+                        <img src="https://qi-b.qoo10cdn.com/partner/goods_image/2/7/1/5/356882715s.jpg" width="250" height="400" alt="나를 소모하지 않는 현명한 태도에 관하여">
+                        <br><br>
+                        <p>작가: 마티아느 뇔케/이미옥 역</p>
+                        <p>평점: 9.6</p>
+                        <p>가격: 16,020원</p>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section">
+                <article class="article">
+                    <div class="article-header">
+                        <h1 class="article-title">2. 변방에서 중심으로</h1>
+                    </div>
+                    <div class="article-body">
+                        <img src="https://qi-b.qoo10cdn.com/partner/goods_image/0/6/0/6/356910606s.jpg" width="250" height="400" alt="변방에서 중심으로">
+                        <br><br>
+                        <p>작가: 문재인, 최종건</p>
+                        <p>평점: 6.2</p>
+                        <p>가격: 29,700원</p>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section">
+                <article class="article">
+                    <div class="article-header">
+                        <h1 class="article-title">3. 어떻게 살 것인가</h1>
+                    </div>
+                    <div class="article-body">
+                        <img src="https://qi-b.qoo10cdn.com/partner/goods_image/6/4/4/7/356906447s.jpg" width="250" height="400" alt="어떻게 살 것인가">
+                        <br><br>
+                        <p>작가: 이광수</p>
+                        <p>평점: 9.7</p>
+                        <p>가격: 15,300원</p>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section">
+                <article class="article">
+                    <div class="article-header">
+                        <h1 class="article-title">4. 오십, 나는 재미있게 살기로 했다</h1>
+                    </div>
+                    <div class="article-body">
+                        <img src="https://qi-b.qoo10cdn.com/partner/goods_image/8/3/3/8/356908338s.jpg" width="250" height="400" alt="오십, 나는 재미있게 살기로 했다">
+                        <br><br>
+                        <p>작가: 이서원</p>
+                        <p>평점: 10</p>
+                        <p>가격: 15,300원</p>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section">
+                <article class="article">
+                    <div class="article-header">
+                        <h1 class="article-title">5. 삶이 흔들릴 때 뇌과학을 읽습니다</h1>
+                    </div>
+                    <div class="article-body">
+                        <img src="https://qi-b.qoo10cdn.com/partner/goods_image/2/5/4/1/356892541s.jpg" width="250" height="400" alt="삶이 흔들릴 때 뇌과학을 읽습니다">
+                        <br><br>
+                        <p>작가: 이케가야 유지</p>
+                        <p>평점: 9.8</p>
+                        <p>가격: 16,200원</p>
+                    </div>
+                </article>
+            </section>
+            <section class="main-section">
+                <article class="article">
+                    <div class="article-header">
+                        <h1 class="article-title">6. 마흔에 읽는 쇼펜하우어</h1>
+                    </div>
+                    <div class="article-body">
+                        <img src="https://qi-b.qoo10cdn.com/partner/goods_image/1/4/5/1/356791451s.jpg" width="250" height="400" alt="마흔에 읽는 쇼펜하우어">
+                        <br><br>
+                        <p>작가: 강용수</p>
+                        <p>평점: 9.9</p>
+                        <p>가격: 15,300원</p>
+                    </div>
+                </article>
+            </section>
+        </div>
+    </div>
+    <script>
+        function updateSubtext() {
+            var yearSelect = document.getElementById("year-select");
+            var weekSelect = document.getElementById("week-select");
+            var selectedYear = yearSelect.value;
+            var selectedWeek = weekSelect.value;
+            console.log("Selected: " + selectedYear + " " + selectedWeek);
+        }
+    </script>
+</body>
+</html>

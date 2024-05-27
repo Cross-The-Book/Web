@@ -12,6 +12,11 @@ body {
     background-color: #f3f3f3;
 }
 
+.main > a{
+    text-decoration: none;
+    color:black;
+}
+
 /* 네비게이션 스타일 */
 .nav {
     width: 100%;
@@ -19,6 +24,7 @@ body {
     background: white;
     overflow: hidden;
     position: relative;
+    margin-bottom: 30px;
 }
 
 .nav .menu_left {
@@ -37,9 +43,17 @@ body {
     font-size: 1.3em;
     margin: 0 80px;
 }
+.menu_item > a{
+    text-decoration: none; /* 밑줄 제거 */
+    color:black;
+}
+.menu_item:hover {
+    background-color: #7AB2B2; /* 원하는 배경색으로 변경 */
+}
 
 .nav>hr {
-    position: absolute;
+    position: relative;
+    margin-top: 10px; /* 원하는 만큼의 값을 입력하세요 */
     bottom: 0;
     left: 0;
     width: 100%;
@@ -69,6 +83,7 @@ body {
 #title h1 {
     /* float: left; 제거 */
     margin-left: 300px;
+    font-size: 2em;
 }
 
 #year-month-select {
@@ -76,25 +91,29 @@ body {
     margin-right: 300px;
 }
 
+.book-details{
+    margin-bottom: 120px;
+}
+
 
 .book-details>h2 {
     margin-top: 20px;
     margin-left: 370px;
+    font-size: 1.5em;
     /* 책 제목과 선택 상자 사이의 공간 */
 }
 
 .book-details>p {
-    font-size: 0.9em;
+    font-size: 1.2em;
     /* 작가 이름의 글씨 크기를 조금 더 작게 */
     color: #666;
     /* 글씨 색상 */
     margin-left: 370px;
+    margin-bottom: 50px;
 }
 
 #book-image {
     height: auto;
-    margin-top: 30px;
-    /* 이미지 비율 유지 */
 }
 
 /* hr{
@@ -105,7 +124,7 @@ body {
 } */
 
 .division {
-    margin-top: 40px;
+    margin-top: 140px;
     border: 0;
     height: 3px;
     background-color: gray;
@@ -118,20 +137,21 @@ body {
 #ad{
     display: block;
     width: 65%;
-    margin: 50px auto 20px auto; /* 상단에 50px 여백, 좌우 자동, 하단에는 여백 없음 */
+    margin: 100px auto 90px auto; /* 상단에 50px 여백, 좌우 자동, 하단에는 여백 없음 */
     white-space: pre-wrap; /* 줄바꿈과 공백을 유지 */
     line-height: 1.5; /* 줄 간격 설정 */
     text-align: center; /* 텍스트를 가운데 정렬 */
     text-indent: 0;
     padding-left: 0;
+    font-size: 1.2em;
 }
 
 #plot{
     display: block;
     width: 50%;
-    margin: 50px auto 20px auto;
+    margin: 100px auto 100px auto;
     /* white-space:pre-wrap; */
-    line-height: 2.0;
+    line-height: 2.5;
     text-indent: 0;
     padding-left: 0;
 }
@@ -140,7 +160,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center; /* 세로 중심으로 정렬 */
-    gap: 20px; /* 박스 사이의 간격 */
+    gap: 10px; /* 박스 사이의 간격 */
+    margin-top:15px;
 }
 
 .quote {
@@ -151,7 +172,7 @@ body {
     background-color: #424769;
     color:white;
     padding: 20px 20px; /* 내부 여백 */
-    margin-top: 20px; /* 상단 여백 */
+    line-height: 1.5;
 }
 
 .quote span{
@@ -159,32 +180,47 @@ body {
    font-weight: bold;
 }
 
-#ad2{
-    display: block;
-    width: 50%;
-    padding: 20px 20px; /* 내부 여백 */
-    margin-top: 60px; /* 상단 여백 */
-}
-
 .author-intro {
     border: 1px solid #ccc; /* 박스 테두리 */
+    background-color: #9DB2BF;
+    border-radius: 20px;
     width: 50%;
     padding: 20px; /* 내부 여백 */
-    margin-top: 20px; /* 상단 여백 */
+    margin:100px auto 55px auto;
+    display: flex; /* 중앙 정렬을 위해 Flexbox 사용 */
+    flex-direction: column; /* 세로 방향 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */ 
 }
 
 .author-photo {
     display: block;
     margin: 0 auto 20px; /* 사진 아래 여백 */
-    max-width: 200px; /* 사진 최대 너비 */
+    max-width: 400px; /* 사진 최대 너비 */
     height: auto; /* 사진 높이 자동 조절 */
 }
 
-h2, h3 {
+.author-intro > h2, .author-intro > h3 {
     text-align: center; /* 제목 가운데 정렬 */
 }
 
-p {
+.author-intro > p  {
     text-align: justify; /* 문단 양쪽 정렬 */
     line-height: 1.6; /* 줄 간격 */
+    width: 65%;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 수직 중앙 정렬 */
+    background-color: grey;
+    padding: 10px 20px;
+    color: white;
+    height: 60px; /* 푸터 높이를 60px로 설정 */
+}
+
+.footer-left, .footer-right {
+    font-size: 16px;
+    margin-left: 100px;
+    margin-right: 100px;
 }

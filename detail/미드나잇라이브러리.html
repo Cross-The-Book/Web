@@ -4,191 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상세페이지</title>
-    <link rel="stylesheet" href="detail.css">
-    <!-- <style>
-        html,
-        body {
-            width: 100%;
-            margin: 0 auto;
-            background: #E6E6E6;
-        }
-
-        .header {
-            width: 100%;
-            height: 15%;
-            background: white;
-        }
-
-        .section {
-            width: 100%;
-            height: 100%;
-            background: white;
-            overflow: hidden;
-        }
-
-        .content {
-            width: calc(100%-40px);
-            height: 100%;
-            margin: 20px;
-        }
-    </style>
-    <style>
-        .header>.main {
-            font-size: 2em;
-            text-align: center;
-            line-height: 110px;
-        }
-
-        .nav {
-            width: 100%;
-            height: 10%;
-            background: white;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .nav .menu_left {
-            float: left;
-            margin-left: 60px;
-        }
-
-        .nav .menu_right {
-            float: right;
-            margin-right: 60px;
-        }
-
-        .menu_item {
-            display: inline-block;
-            /* 각 메뉴 아이템 간격 설정 */
-            font-size: 1.3em;
-            margin: 0 80px;
-        }
-
-        .nav>hr {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            border-bottom: 1px solid lightgrey;
-            box-shadow: 0px 3px 7px grey;
-        }
-    </style>
-    <style>
-        .content .book_image {
-            float: left;
-            margin-left: 200px;
-            margin-top: 50px;
-            max-height: 100%;
-        }
-
-        .book_image img {
-            box-shadow: 5px 5px 5px gray;
-        }
-    </style>
-
-    <style>
-        .book_top {
-            margin-top: 100px;
-        }
-
-        .book_name h1 {
-            display: inline-block;
-            margin-left: 120px;
-            margin-bottom: 10px;
-            /* Adjusted margin below the title */
-        }
-
-        .book_writer {
-            float: left;
-            margin-left: 125px;
-            margin-top: 40px;
-        }
-
-        .writer {
-            margin-left: 90px;
-        }
-
-        .box_tag {
-            float: left;
-            margin-left: 87px;
-            margin-top: 10px;
-        }
-
-        .tag_list {
-            display: block;
-            margin-top: 20px;
-        }
-
-        .tag_item {
-            display: inline-block;
-            font-size: 15px;
-            color: gray;
-        }
-
-        .rating {
-            display: inline-block;
-            direction: row;
-            margin-top: 10px;
-            /* 추가된 부분 */
-        }
-
-        .star {
-            font-size: 2em;
-            color: gray;
-        }
-
-        .star.filled {
-            color: gold;
-        }
-    </style>
-    <style>
-        .book_name_hr {
-            margin-top: 60px;
-            width: 500px;
-            /* 수평선의 전체 너비 사용 */
-            border: none;
-            /* 기본 테두리 제거 */
-            height: 1px;
-            /* 수평선의 높이 설정 */
-            background-color: gray;
-            /* 수평선의 색상 설정 */
-            margin-top: 25px;
-            /* 수평선과 위쪽 요소 간의 간격 설정 */
-            margin-left: 37px;
-        }
-
-        .box_summary {
-            margin-top: 100px;
-            /* Adjust as needed */
-            margin-left: 760px;
-            padding: 20px;
-        }
-
-        
-
-        .summary_content {
-            font-size: 14px;
-            line-height: 1.6;
-            white-space: pre-line;
-            font-style: italic;
-            max-width: 500px;
-        }
-    </style> -->
+    <title>미드나잇 라이브러리</title>
+    <link rel="stylesheet" href="./detailTag.css">
+    <link rel="stylesheet" href="./detail.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="main">책을건너</div>
+        <div class="main"><a href="../mainPage.html">책을건너</a></div>
     </header>
     <nav class="nav">
         <ul class="menu_left">
-            <li class="menu_item">베스트셀러</li>
-            <li class="menu_item">스테디셀러</li>
+            <li class="menu_item"><a href="../bestseller.html">베스트셀러</a></li>
+            <li class="menu_item"><a href="../steadyseller.html">스테디셀러</a></li>
         </ul>
         <ul class="menu_right">
-            <li class="menu_item">이달의 도서</li>
-            <li class="menu_item">도서 카테고리</li>
+            <li class="menu_item"><a href="../thismonth/이달의 도서.html">이달의 도서</a></li>
+            <li class="menu_item"><a href="../category.html">도서 카테고리 </a></li>
         </ul>
         <hr>
     </nav>
@@ -214,10 +46,9 @@
                         <li class="tag_item">#04월</li>
                         <li class="tag_item">#28일</li>
                     </ul>
-                    <!--  <hr class="book_name_hr"> -->
                 </div>
-                <div id="rating">평점</div>
-                <div id="price"></div>
+                <div id="rating"><span id="rating_text"></span></div>
+                <div id="price"><span id="price_text">판매가격</span><span id="sale_price"></span></div>
                 <button id="buyButton">구매하기</button>
                 <script src="script.js"></script>
             </div>
@@ -225,51 +56,54 @@
         <div class="hr">
             <hr class="book_des_hr">
         </div>
-        <div id="lists">
-            <ul class="lists">
-                <li class="lists_item">목차</li>
-                <li class="lists_item">줄거리</li>
-                <li class="lists_item">추천 도서</li>
+        
+        <div class="lists_wrapper">
+            
+        <nav class="lists">
+            <ul>
+                <li class="lists_item"><a href="#table">목차</a></li>
+                <li class="lists_item"><a href="#story">줄거리</a></li>
+                <li class="lists_item"><a href="#recommend_books">추천 도서</a></li>
             </ul>
+        </nav>
         </div>
         <div id="table">
-            <h3>목차</h3>
+            <h3 class="lists_title">목차</h3><br>
             <div id="table_content">
-                시인의 말
+                <p>시인의 말</p>
 
-                1부
-                어떤 그림 | 공원 닫는 시간 | 명령 | 아주 오래전부터 | 언젠가는 알게 될 모두의 것들
-                | 종소리 | 줄 | 농밀 | 기차표 | 어질어질 | 폭설 | 그런 것처럼 | 오늘의 가능성
+                <p class="table_content_p">1부</p>
+                <p>어떤 그림 | 공원 닫는 시간 | 명령 | 아주 오래전부터 | 언젠가는 알게 될 모두의 것들
+                    | 종소리 | 줄 | 농밀 | 기차표 | 어질어질 | 폭설 | 그런 것처럼 | 오늘의 가능성</p>
 
-                2부
-                누군가를 이토록 사랑한 적 | 청춘에게 | 시계를 풀어 흔들어줘 | 사랑 | 사랑 | 사람 귤(橘)
-                | 집을 봐드립니다 | 원했던 바다 | 낮달 | 한 달 | 꼬리 | 바람과 봉지 | 나는 압니다 | 상실의 배 |
-                오래 만났다는 사실만으로 사이를 유지할 수는 없다 | 완독회 | 과녁 | 몸에게 | 흙냄새 |
-                장미 나무 그늘 아래 | 물든 잎
+                <p class="table_content_p">2부</p>
+                <p>누군가를 이토록 사랑한 적 | 청춘에게 | 시계를 풀어 흔들어줘 | 사랑 | 사랑 | 사람 귤(橘)
+                    | 집을 봐드립니다 | 원했던 바다 | 낮달 | 한 달 | 꼬리 | 바람과 봉지 | 나는 압니다 | 상실의 배 |
+                    오래 만났다는 사실만으로 사이를 유지할 수는 없다 | 완독회 | 과녁 | 몸에게 | 흙냄새 |
+                    장미 나무 그늘 아래 | 물든 잎</p>
 
-                3부
-                킬리만자로의 눈 | 우리는 누구나 바다로 간다 하지만 | 어떻게도 떨쳐낼 수 없이 모두가 그 사이 중간에 있다
-                | 이면지 뭉치 | 우산의 탄생 | 경력서 | 어린 시인에게 | 멀리서 한국어를 배우려는 당신에게 |
-                내가 죽어 누워 있을 때 | 한쪽 날개와 반대쪽 날개 | 배역에 대한 고민 | 흰곰이 나타났다 |
-                기차는 칭다오에서 출발한다 | 친구 | 하산 | 인간은 연습한다 | 내가 소년의 딱지를 뗀 세상의 첫날 |
-                바싹 자른 연결 부위 | 누가 내게 술 한잔을 사줘도 되느냐고 물었어 | 마음은 꽃게 | 소년에게
+                <p class="table_content_p">3부</p>
+                <p>킬리만자로의 눈 | 우리는 누구나 바다로 간다 하지만 | 어떻게도 떨쳐낼 수 없이 모두가 그 사이 중간에 있다
+                    | 이면지 뭉치 | 우산의 탄생 | 경력서 | 어린 시인에게 | 멀리서 한국어를 배우려는 당신에게 |
+                    내가 죽어 누워 있을 때 | 한쪽 날개와 반대쪽 날개 | 배역에 대한 고민 | 흰곰이 나타났다 |
+                    기차는 칭다오에서 출발한다 | 친구 | 하산 | 인간은 연습한다 | 내가 소년의 딱지를 뗀 세상의 첫날 |
+                    바싹 자른 연결 부위 | 누가 내게 술 한잔을 사줘도 되느냐고 물었어 | 마음은 꽃게 | 소년에게</p>
 
-                4부
-                해변의 절벽 | 이것도 다 매듭을 풀려는 것 아니겠습니까 | 그네 | 어느 가게 유리에 찍힌 이마 자국 |
-                잠시 커튼 이야기 | 환풍 | 가을의 우체국 | 이삿날 | 재워줍니다 이별은 덤이고요 | 조각들을 좋아해 |
-                내가 원하는 것 | 안 보고 싶은 마음 | 누락 | 공항에서
+                <p class="table_content_p">4부</p>
+                <p>해변의 절벽 | 이것도 다 매듭을 풀려는 것 아니겠습니까 | 그네 | 어느 가게 유리에 찍힌 이마 자국 |
+                    잠시 커튼 이야기 | 환풍 | 가을의 우체국 | 이삿날 | 재워줍니다 이별은 덤이고요 | 조각들을 좋아해 |
+                    내가 원하는 것 | 안 보고 싶은 마음 | 누락 | 공항에서</p>
 
-                해설
-                사랑한 적, 사랑할 적 · 이광호
+                <p class="table_content_p">해설</p>
+                <p>사랑한 적, 사랑할 적 · 이광호</p>
             </div>
         </div>
         <div class="hr">
             <hr class="table_hr">
         </div>
         <div id="story">
-            <h3>줄거리</h3>
-            <div id="story_content">
-                주인공 노라 시드는 자신의 인생에 불만을 가지고 집에서 자살을 시도했고, 눈을 뜨니 사방에 안개가 깔린 장소에 와 있었다.
+            <h3 class="lists_title">줄거리</h3>
+            <p>주인공 노라 시드는 자신의 인생에 불만을 가지고 집에서 자살을 시도했고, 눈을 뜨니 사방에 안개가 깔린 장소에 와 있었다.
                 그곳에는 작은 슈퍼마켓 크기의 도서관이 있는데 시간이 00:00:00에서 흐르지 않는다.
                 초록색의 책들이 가득한 도서관에는 생전 사서였던 엘름 부인이 있다. 이곳에서 엘름 부인은 노라의 생각을 읽을 수 있다.
                 엘름 부인이 말하는 바에 의하면 삶과 죽음 사이에는 거쳐가는 중간 지대가 있는데, 이것은 사람마다 모두 다르다고 한다. 노
@@ -277,49 +111,45 @@
                 이곳을 '자정의 도서관(Midnight Library)'이라고 부르고, 자정의 도서관에 꽂힌 책들에는 내가 살 수도 있었던 삶을 살아볼
                 기회가 담겨 있다. 따라서 책을 펼치면 그 선택을 한 삶을 경험할 수 있다.
                 여러 가지 삶들을 경험해 본 노라는 결국 자신의 원래 삶이 가장 행복하고 가치 있다는 것을 발견하고, 도서관이 붕괴되면서
-                노라는 현실로 돌아온다.
-            </div>
+                노라는 현실로 돌아온다.</p>
             <div id="publisher_review">
-                23시 22분. 죽기에 딱 좋은 시간. 초록의 책들이 가득한 자정의 도서관에서 가장 완벽한 삶을 찾는 여정이 시작된다!
-
-                <span>- 출판사 서평</span>
+                <p>23시 22분. 죽기에 딱 좋은 시간. 초록의 책들이 가득한 자정의 도서관에서 가장 완벽한 삶을 찾는 여정이 시작된다!<br><br>- 출판사 서평</p>
             </div>
 
             <div class="summary_video">
-                <iframe width="640" height="360" src="https://www.youtube.com/embed/dBVs1t50Iz8?enablejsapi=1" title="미드나잇 라이브러리" frameborder="0"></iframe>
+                <iframe width="640" height="360" src="https://www.youtube.com/embed/dBVs1t50Iz8?enablejsapi=1"
+                    title="미드나잇 라이브러리" frameborder="0"></iframe>
             </div>
         </div>
         <div class="hr">
             <hr class="table_hr">
         </div>
         <div id="recommend_books">
-            <h3>추천 도서</h3>
+            <h3 class="lists_title">추천 도서</h3>
             <div id="recommend_content">
                 <div class="recommend_book_item">
                     <img src="https://qi-b.qoo10cdn.com/partner/goods_image/2/7/1/5/356882715g.jpg" alt="어떻게 살 것인가">
                     <p>어떻게 살 것인가</p>
                 </div>
                 <div class="recommend_book_item">
-                    <img src="https://qi-b.qoo10cdn.com/partner/goods_image/2/7/1/5/356882715g.jpg" alt="나를 소모하지 않는 현명한 태도에 관하여">
-                    <p>나를 소모하지 않는 현명한 태도에 관하여</p>
+                    <img src="https://qi-b.qoo10cdn.com/partner/goods_image/2/7/1/5/356882715g.jpg"
+                        alt="나를 소모하지 않는 현명한 태도에 관하여">
+                    <p>나를 소모하지 않는<br>현명한 태도에 관하여</p>
                 </div>
                 <div class="recommend_book_item">
-                    <img src="https://qi-b.qoo10cdn.com/partner/goods_image/2/5/4/1/356892541g.jpg" alt="삶이 흔들릴 때 뇌과학을 읽습니다">
-                    <p>삶이 흔들릴 때 뇌과학을 읽습니다</p>
+                    <img src="https://qi-b.qoo10cdn.com/partner/goods_image/2/5/4/1/356892541g.jpg"
+                        alt="삶이 흔들릴 때 뇌과학을 읽습니다">
+                    <p>삶이 흔들릴 때<br>뇌과학을 읽습니다</p>
                 </div>
             </div>
         </div>
-        
+
     </section>
     <footer>
         <div class="footer-left">책을 건너</div>
         <div class="footer-right">: 이용가이드 : ABOUT US</div>
     </footer>
+    <script src="midNav.js"></script>
 </body>
 
 </html>
-
-<!--  <div class="box_summary">
-                   
-                    
-                </div> -->

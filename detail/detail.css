@@ -1,16 +1,14 @@
-/* 전체 페이지의 기본 스타일 설정 */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 /* 헤더 스타일 */
 .header .main {
     text-align: center;
     font-size: 24px;
     padding: 20px;
     background-color: #f3f3f3;
+}
+
+.main > a{
+    text-decoration: none;
+    color:black;
 }
 
 /* 네비게이션 스타일 */
@@ -32,22 +30,23 @@ body {
     margin-right: 60px;
 }
 
-/* 메뉴 리스트 스타일 - 리스트 스타일 제거 */
-/* .menu_left, .menu_right {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-} */
-
 .menu_item {
     display: inline-block;
     /* 각 메뉴 아이템 간격 설정 */
     font-size: 1.3em;
     margin: 0 80px;
 }
+.menu_item > a{
+    text-decoration: none; /* 밑줄 제거 */
+    color:black;
+}
+.menu_item:hover {
+    background-color: #7AB2B2; /* 원하는 배경색으로 변경 */
+}
+
 .nav>hr {
-    position: absolute;
+    position: relative;
+    margin-top: 10px; /* 원하는 만큼의 값을 입력하세요 */
     bottom: 0;
     left: 0;
     width: 100%;
@@ -95,9 +94,12 @@ body {
 }
 
 .book_writer, .box_tag {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
+.box_tag{
+    margin-bottom: 30px;
+}
 /* 태그 리스트 스타일 - 리스트 스타일 제거 */
 .tag_list {
     list-style: none;
@@ -108,19 +110,30 @@ body {
 
 .tag_item {
     margin-right: 10px;
+    color:#686D76;
 }
 
-/* /* 섹션과 태그 간의 구분선 */
-hr {
-    margin-top: 20px;
-    border: 0;
-    height: 1px;
-    background-color: #ccc;
-} */
+#rating_text, #price_text, #sale_price{
+    display: inline-block;
+    margin-right: 20px;
+}
 
-/* 별점(rating) 스타일 */
-#rating {
-    margin-top: 20px;
+#rating_text{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+#price_text{
+    font-size: 1.2em;
+}
+
+#sale_price{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+#rating span {
+    margin: 0;
+    padding: 0;
 }
 
 .star {
@@ -132,9 +145,18 @@ hr {
     color: gold;
 }
 
+.star.half-filled {
+    color: lightgoldenrodyellow; /* 반 채워진 별의 색상 */
+}
+
+#price {
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+
 #buyButton {
     display: block;
-    margin: 20px auto; /* 상하 20px, 좌우 auto로 가운데 정렬 */
+    margin: 80px auto; /* 상하 20px, 좌우 auto로 가운데 정렬 */
     padding: 15px 50px; /* 버튼의 패딩을 늘려서 크기를 키움 */
     font-size: 16px;
     background-color: #000; /* 배경색을 검은색으로 설정 */
@@ -149,16 +171,12 @@ hr {
     background-color: #333; /* 호버 시 배경색을 조금 더 밝게 */
 }
 
-
-#price {
-    margin: 20px 0;
-    font-size: 18px;
-}
-
 .hr{
     margin-top:20px;
     text-align:center;
+    margin-bottom: 50px;
 }
+
 .book_des_hr {
     position: absolute;
     margin-top:50px;
@@ -167,40 +185,87 @@ hr {
     box-shadow: 0px 3px 7px grey;
     transform: translateX(-50%);
 }
-#lists {
-    margin-top: 90px; /* 상단 여백 추가 */
-    width: 95%; /* lists를 가로로 100% 차지하게 */
-    display: block;
+/* 밑줄을 추가하기 위한 클래스 */
+.active {
+    text-decoration: underline;
 }
-
+.lists_wrapper{
+    width: 100%;
+}
 .lists {
+    /* margin-top: 90px; */ /* 상단 여백 추가 */
+    width: 100%; 
+    height: 60px;
+    top: 0;
+    padding: 10px 0;
+    transition: all 0.5s;
+    position: relative;
+}
+.lists > ul {
+    margin-left: 250px;
+    padding:0;
     list-style: none;
+    display: flex;
+    flex-direction: row;
+   /*  list-style: none;
     margin-left: 250px;
     display: flex;
     flex-wrap: wrap;
-    float: left;
+    float: left; */
 }
-
+.fixed-nav{
+    position: fixed;
+    top:0;
+    box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
 .lists_item {
     margin-right: 50px;
+    font-size: 1.3em;
 }
-#table h4, #table_content{
-    margin-left:20px;
-}
-#table, #story, #recommend_books{
+
+.lists_title{
+    font-size: 1.1em;
+    margin-top: 40px;
+    margin-bottom: 40px;
     display: block;
-    width: 65%;
+}
+
+#table, #story{
+    display: block;
+    width: 57%;
     margin-top:50px;
 }
 
-#table_content, #story_content, #publisher_review{
-    white-space: pre-wrap; /* 줄바꿈과 공백을 유지 */
-    font-family: Arial, sans-serif; /* 원하는 폰트 설정 */
+#recommend_books{
+    display: block;
+    width: 60%;
+    margin-top: 50px;
+}
+
+#table_content{
     line-height: 1.5; /* 줄 간격 설정 */
     margin:0;
     text-indent:0;
     padding-left:0;
 }
+
+.table_content_p{
+    margin-top: 20px;
+}
+#story > p{
+    line-height: 1.8; /* 줄 간격 설정 */
+    margin:0;
+    text-indent:0;
+    padding-left:0;
+    margin-bottom: 50px;
+}
+/* #publisher_review{
+    line-height: 1.5;
+    margin:0;
+    text-indent:0;
+    padding-left:0;
+} */
 
 .table_hr{
     position: absolute;
@@ -214,6 +279,13 @@ hr {
 #publisher_review{
     border:1px solid lightgray;
     background-color: lightgray;
+    border-radius: 10px;
+    padding:0 20px;
+}
+
+#publisher_review > p{
+    font-size: 1.1em;
+    margin:25px 20px;
 }
 
 .summary_video {
@@ -247,18 +319,9 @@ hr {
 }
 
 .recommend_book_item p{
-    margin-top:5px;
+    font-size: 1.02em;
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; /* 수직 중앙 정렬 */
-    background-color: grey;
-    padding: 10px 20px;
-    color: white;
-    height: 60px; /* 푸터 높이를 60px로 설정 */
-}
 
 .footer-left, .footer-right {
     font-size: 16px;
