@@ -2,6 +2,21 @@
 <html>
 <head>
     <title>책을건너</title>
+    <head>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#rate-book-form').submit(function(event) {
+                    event.preventDefault();
+                    const rating = $('#rating').val();
+                    $('#user-rating').text(`내 평점: ${rating}`);
+                });
+            });
+        </script>
+        
+    </head>
+    
 
     <style>
         * {
@@ -212,7 +227,7 @@
                         </div>
                         <div class="article-body">
                             <a href="midnight.html">
-                                <img src="midnight.jpg" width="250" height="400">
+                                <img src="https://qi-b.qoo10cdn.com/partner/goods_image/9/9/3/7/349129937g.jpg" width="250" height="400">
                             </a>
                             <br>
                             <br>
@@ -228,7 +243,7 @@
                         </div>
                         <div class="article-body">
                             <a href="book2.html">
-                                <img src="book2.jpg" width="250" height="400">
+                                <img src="https://qi-b.qoo10cdn.com/partner/goods_image/2/7/1/5/356882715g.jpg" width="250" height="400">
                             </a>
                             <br>
                             <br>
@@ -246,7 +261,7 @@
                         </div>
                         <div class="article-body">
                             <a href="book3.html">
-                                <img src="book3.jpg" width="250" height="400">
+                                <img src="https://qi-b.qoo10cdn.com/partner/goods_image/0/6/0/6/356910606s.jpg" width="250" height="400">
                             </a>
                             <br>
                             <br>
@@ -260,7 +275,7 @@
         </div>
         <article class="today-book">
             <a href="midnight.html">
-                <img src="midnight.jpg" width="150" height="300">
+                <img src="https://qi-b.qoo10cdn.com/partner/goods_image/9/9/3/7/349129937g.jpg" width="150" height="300">
             </a>
             <div class="today-book-details">
                 <div class="article-header">
@@ -273,9 +288,23 @@
                     </p>
                     <p>작가:  매트 헤이그</p>
                     <p>평점:  9.5</p>
+                    <div id="rate-book-section">
+                        <h2>오늘의 책을 평가하면?</h2>
+                        <form id="rate-book-form">
+                            <label for="rating">평점:</label>
+                            <input type="number" id="rating" name="rating" min="1" max="10" required>
+                            <button type="submit">평점 남기기</button>
+                        </form>
+                        <div id="user-rating"></div>
+                    </div>
                 </div>
             </div>
+            
         </article>
     </div>
+    
+    
 </body>
 </html>
+
+
