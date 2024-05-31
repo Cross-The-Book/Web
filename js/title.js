@@ -9,7 +9,7 @@ $(document).ready(function() {
 
     // 새로운 a 요소 생성
     const linkElement = document.createElement('a');
-    linkElement.href = '../main/mainPage.html'; // 링크할 페이지 설정
+    linkElement.href = '../html/mainPage.html'; // 링크할 페이지 설정
 
     // img 요소를 a 요소 안에 넣기
     linkElement.appendChild(imgElement);

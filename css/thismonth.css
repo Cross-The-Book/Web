@@ -1,0 +1,133 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+#title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#title h1 {
+    margin-left: 300px;
+    font-size: 2em;
+}
+
+#year-month-select {
+    margin-right: 300px;
+}
+
+.book-details{
+    margin-bottom: 120px;
+}
+
+
+.book-details>h2 {
+    margin-top: 60px;
+    margin-left: 370px;
+    font-size: 1.5em;
+}
+/* 책 제목과 선택 상자 사이의 공간 */
+.book-details>p {
+    font-size: 1.2em;
+    color: #FAF1E4;
+    margin-left: 370px;
+    margin-bottom: 50px;
+    margin:10px 0px 50px 370px;
+}
+
+#book-image {
+    height: auto;
+    max-width: 500px;
+}
+
+.division {
+    margin-top: 140px;
+    border: 0;
+    height: 3px;
+    background-color: gray;
+    width: 55%;
+    margin: 20px auto;
+}
+
+#ad{
+    display: block;
+    width: 65%;
+    margin: 100px auto 90px auto; 
+    white-space: pre-wrap; 
+    line-height: 1.5; 
+    text-align: center; 
+    text-indent: 0;
+    padding-left: 0;
+    font-size: 1.2em;
+}
+
+.plot{
+    display: block;
+    width: 50%;
+    margin: 100px auto 100px auto;
+    line-height: 2.5;
+    text-indent: 0;
+    padding-left: 0;
+}
+
+.quotes-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top:15px;
+}
+
+.quote {
+    display: block;
+    width: 50%;
+    border: 2px dashed white; 
+    border-radius: 10px;
+    background-color: #424769;
+    padding: 20px 20px;
+    line-height: 1.5;
+}
+
+.quote span{
+   color:#EEEEEE;
+   background-color: #424769;
+   font-weight: bolder;
+}
+
+.author-intro {
+    border: 1px solid #213555;
+    background-color: #213555;
+    border-radius: 20px;
+    width: 50%;
+    padding: 20px;
+    margin:100px auto 55px auto;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+}
+
+.author-photo {
+    display: block;
+    margin: 30px auto 20px;
+    max-width: 400px; 
+    height: auto;
+}
+
+.author-intro > h2, .author-intro > h3 {
+    text-align: center; 
+    background-color: #213555;
+}
+
+.author-intro > p  {
+    text-align: justify;
+    line-height: 1.6;
+    width: 65%;
+    background-color: #213555;
+    margin-top:20px;
+}

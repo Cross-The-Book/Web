@@ -6,13 +6,13 @@ $(document).ready(function () {
     menuItems.forEach((item, index) => {
         switch (index) {
             case 0:
-                item.href = '../bestseller/bestseller.html';
+                item.href = '../html/bestseller.html';
                 break;
             case 1:
-                item.href = '../steadyseller/steadyseller.html';
+                item.href = '../html/steadyseller.html';
                 break;
             case 2:
-                item.href = '../thismonth/이달의 도서.html';
+                item.href = '../html/thismonth.html';
                 break;
             case 3:
                 item.href = '../category.html';

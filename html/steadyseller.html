@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>스테디셀러</title>
     <link rel="stylesheet" href="../css/tag.css">
     <link rel="stylesheet" href="../css/title.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="./bestseller.css">
+    <link rel="stylesheet" href="../css/bestSteadySeller.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="./bestseller.js"></script>
+    <script src="../js/steadyseller.js"></script>
     <script src="../js/title.js"></script>
     <script src="../js/nav.js"></script>
 </head>
+
 <body>
     <header class="header">
-        <h1 class="main-title"><a>책을건너</a></h1>
+        <div class="main-title"><a>책을건너</a></div>
     </header>
     <nav class="nav">
         <ul class="menu_left">
@@ -24,13 +26,13 @@
         </ul>
         <ul class="menu_right">
             <li class="menu_item"><a>이달의 도서</a></li>
-            <li class="menu_item"><a>도서 카테고리  </a></li>
+            <li class="menu_item"><a>도서 카테고리</a></li>
         </ul>
         <hr>
     </nav>
     <div class="content">
         <div class="header-container">
-            <h1>베스트셀러</h1>
+            <h1>스테디셀러</h1>
             <div class="header-subtext-container">
                 <select id="year-select" onchange="updateContent()">
                     <option value="2024">2024년</option>
@@ -52,4 +54,5 @@
         <div class="footer-right">: 이용가이드 : ABOUT US</div>
     </footer>
 </body>
+
 </html>

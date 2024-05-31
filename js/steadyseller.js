@@ -8,17 +8,23 @@ const books = [
 ];
 
 const rankingsData = {
-    '2023.10.01 ~ 2024.04.30': {
-        '국내도서': [0, 1, 2, 3, 4, 5],
-        '국외도서': [5, 4, 3, 2, 1, 0],
+    '2024': {
+        '5월 1주': [0, 1, 2, 3, 4, 5],
+        '5월 2주': [5, 4, 3, 2, 1, 0],
+        '5월 3주': [2, 3, 4, 5, 0, 1],
+        '5월 4주': [1, 0, 5, 4, 3, 2]
     },
-    '2023.11.01 ~ 2024.05.31': {
-        '국내도서': [3, 2, 1, 0, 5, 4],
-        '국외도서': [4, 5, 0, 1, 2, 3],
+    '2023': {
+        '5월 1주': [3, 2, 1, 0, 5, 4],
+        '5월 2주': [4, 5, 0, 1, 2, 3],
+        '5월 3주': [1, 4, 3, 0, 5, 2],
+        '5월 4주': [2, 3, 1, 4, 0, 5]
     },
-    '2023.12.01 ~ 2024.06.30': {
-        '국내도서': [5, 4, 3, 2, 1, 0],
-        '국외도서': [0, 1, 2, 3, 4, 5],
+    '2022': {
+        '5월 1주': [5, 4, 3, 2, 1, 0],
+        '5월 2주': [0, 1, 2, 3, 4, 5],
+        '5월 3주': [3, 2, 1, 0, 5, 4],
+        '5월 4주': [1, 0, 3, 4, 2, 5]
     }
 };
 
@@ -29,7 +35,7 @@ function updateContent() {
     const selectedWeek = weekSelect.value;
     
     const rankings = rankingsData[selectedYear][selectedWeek];
-    const contentContainer = document.getElementById('content');
+    const contentContainer = document.getElementById('book-container');
     contentContainer.innerHTML = ''; 
 
     rankings.forEach((rankIndex, index) => {
