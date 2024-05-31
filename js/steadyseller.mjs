@@ -21,48 +21,50 @@ const rankingsData = {
     }
 };
 
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded', function () {
     const yearSelect = document.getElementById('year-select');
     const weekSelect = document.getElementById('week-select');
-    yearSelect.addEventListener('change',function(){
+    yearSelect.addEventListener('change', function () {
         const selectedYear = yearSelect.value;
         const selectedWeek = weekSelect.value;
         updateContent(selectedYear, selectedWeek);
     })
-    weekSelect.addEventListener('change',function(){
+    weekSelect.addEventListener('change', function () {
         const selectedYear = yearSelect.value;
         const selectedWeek = weekSelect.value;
         updateContent(selectedYear, selectedWeek);
     })
-    updateContent(yearSelect.value,weekSelect.value);
+    updateContent(yearSelect.value, weekSelect.value);
 });
 
 function updateContent(selectedYear, selectedWeek) {
     const rankings = rankingsData[selectedYear][selectedWeek];
     const contentContainer = document.getElementById('book-container');
-    contentContainer.innerHTML = ''; 
+    contentContainer.innerHTML = '';
 
     rankings.forEach((rankIndex, index) => {
         const book = steadyseller[rankIndex];
-        console.log('index',rankIndex);
         const section = document.createElement('section');
         section.className = 'main-section';
 
         section.innerHTML = `
+        <a href="details.html?book=${encodeURIComponent(JSON.stringify(book))}">
             <article class="article">
                 <div class="article-header">
                     <h1 class="article-title">${index + 1}. ${book.title}</h1>
                 </div>
                 <div class="article-body">
-                    <img src="${book.img}" width="250" height="400" alt="${book.title}">
+                <a href="../html/detail.html?book=${encodeURIComponent(JSON.stringify(book))}">
+                    <img src="${book.img}" width="250" height="400" alt="${book.title}"></a>
                     <br><br>
                     <p>작가: ${book.author}</p>
                     <p>평점: ${book.rating}</p>
                     <p>가격: ${book.price}</p>
                 </div>
             </article>
+        </a>
         `;
-        
+
         contentContainer.appendChild(section);
     });
 }

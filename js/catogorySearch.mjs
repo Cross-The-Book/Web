@@ -1,20 +1,3 @@
-/* $(document).ready(function() {
-    $('#search-form').submit(function(event) {
-        event.preventDefault();
-        const searchTerm = $('#search-input').val().toLowerCase();
-        
-        $('.article').each(function() {
-            const title = $(this).data('title').toLowerCase();
-            const author = $(this).data('author').toLowerCase();
-            
-            if (title.includes(searchTerm) || author.includes(searchTerm)) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-        });
-    });
-}); */
 import { allBookData } from "./books.js";
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -55,16 +38,17 @@ function updateContent(allBookData) {
     }
     console.log(allBookData);
     allBookData.forEach(bookData => {
+        console.log(JSON.stringify(bookData));
         const div = document.createElement('figure');
         div.className = 'book';
         div.innerHTML = `
-        <a href="./detail/미드나잇라이브러리.html">
-                        <img src="${bookData.img}" width="250" height="400">
-                    </a>
-                    <figcaption>
-                    <p class="book_title">${bookData.title}</p>
-                    <p>${bookData.author}</p>
-                    <p>${bookData.rating}</p></figcation>
+            <a href="../html/detail.html?book=${encodeURIComponent(JSON.stringify(bookData))}">
+                <img src="${bookData.img}" width="250" height="400">
+            </a>
+            <figcaption>
+                <p class="book_title">${bookData.title}</p>
+                <p>${bookData.author}</p>
+                <p>${bookData.rating}</p></figcation>
         `;
         contentContainer.appendChild(div);
     });
