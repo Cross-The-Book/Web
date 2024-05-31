@@ -44,7 +44,6 @@ function updateContent(selectedYear, selectedWeek) {
 
     rankings.forEach((rankIndex, index) => {
         const book = bestseller[rankIndex];
-        console.log('index',rankIndex);
         const section = document.createElement('section');
         section.className = 'main-section';
 
@@ -54,7 +53,8 @@ function updateContent(selectedYear, selectedWeek) {
                     <h1 class="article-title">${index + 1}. ${book.title}</h1>
                 </div>
                 <div class="article-body">
-                    <img src="${book.img}" width="250" height="400" alt="${book.title}">
+                <a href="../html/detail.html?book=${encodeURIComponent(JSON.stringify(book))}">
+                    <img src="${book.img}" width="250" height="400" alt="${book.title}"></a>
                     <br><br>
                     <p>작가: ${book.author}</p>
                     <p>평점: ${book.rating}</p>
