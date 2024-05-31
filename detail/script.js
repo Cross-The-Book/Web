@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function() {
     const ratingElement = document.getElementById('rating');
     const ratingValue = 3.5; // 표시할 평점 값
     

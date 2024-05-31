@@ -1,0 +1,127 @@
+/* 헤더 스타일 */
+.header .main {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+    background-color: #f3f3f3;
+}
+
+.main > a{
+    text-decoration: none;
+    color:black;
+}
+
+.nav {
+    width: 100%;
+    height: 10%;
+    background: white;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.nav .menu_left {
+    float: left;
+    margin-left: 60px;
+}
+
+.nav .menu_right {
+    float: right;
+    margin-right: 60px;
+}
+
+.menu_item {
+    display: inline-block;
+    /* 각 메뉴 아이템 간격 설정 */
+    font-size: 1.3em;
+    margin: 0 80px;
+}
+.menu_item > a{
+    text-decoration: none; /* 밑줄 제거 */
+    color:black;
+}
+.menu_item:hover {
+    background-color: #7AB2B2; /* 원하는 배경색으로 변경 */
+}
+.nav>hr {
+    position: relative;
+    margin-top: 10px; /* 원하는 만큼의 값을 입력하세요 */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid lightgrey;
+    box-shadow: 0px 3px 7px grey;
+}
+
+.header-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header-subtext-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 10px;
+}
+.content-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.main-section {
+    flex: 1 1 calc(33.33% - 20px); 
+    box-sizing: border-box;
+}
+.article {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+    height: 600px; 
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+}
+.article-header {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    flex: 0 0 auto; 
+}
+.article-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.article-body {
+    padding: 10px;
+    flex: 1 1 auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.article-body img {
+    max-width: 100%;
+    height: auto;
+}
+.article-body p {
+    margin: 5px 0;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 수직 중앙 정렬 */
+    background-color: grey;
+    padding: 10px 20px;
+    color: white;
+    height: 60px; /* 푸터 높이를 60px로 설정 */
+}
+
+.footer-left, .footer-right {
+    font-size: 16px;
+    margin-left: 100px;
+    margin-right: 100px;
+}

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: '맑은 고딕', sans-serif;
+    background-color: #10222E;
+    color:#EFE8D6;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+    color:#EFE8D6;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* 수직 중앙 정렬 */
+    background-color: #FDF3DA;
+    padding: 10px 20px;
+    height: 60px; /* 푸터 높이를 60px로 설정 */
+}

@@ -1,0 +1,58 @@
+/* 헤더 스타일 */
+.header .main {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.main > a{
+    text-decoration: none;
+    color:black;
+}
+
+.nav {
+    width: 95%;
+    height: 10%;
+    margin:0 auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.nav .menu_left {
+    float: left;
+    margin-left: 60px;
+}
+
+.nav .menu_right {
+    float: right;
+    margin-right: 60px;
+}
+
+.menu_item {
+    display: inline-block;
+    /* 각 메뉴 아이템 간격 설정 */
+    font-size: 1.3em;
+    margin: 0 80px;
+}
+.menu_item:hover {
+    background-color: #7AB2B2; /* 원하는 배경색으로 변경 */
+}
+.nav>hr {
+    position: relative;
+    margin-top: 60px; /* 원하는 만큼의 값을 입력하세요 */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: none; /* 기본 border 제거 */
+    border-top: 2px solid #C4BEA4; /* 원하는 스타일로 재정의 */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9); /* offsetY 값을 크게 하고, 알파 값을 높임 */
+}
+
+
+
+.main-title {
+    font-size: 30px;
+    color: #181818;
+    text-align: center; 
+}
