@@ -1,8 +1,20 @@
+@font-face {
+    font-family: 'josefinsans-regular';
+    src: url(../font/JosefinSans-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'notosans';
+    src: url(../font/NotoSansKR-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'nanumpen';
+    src: url(../font/NanumPenScript-Regular.ttf) format(truetype);
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: '맑은 고딕', sans-serif;
+    font-family: 'notosans';
     background-color: #10222E;
     color:#EFE8D6;
 }
@@ -13,6 +25,7 @@ li {
     list-style: none;
     color:#EFE8D6;
 }
+
 footer {
     display: flex;
     justify-content: space-between;

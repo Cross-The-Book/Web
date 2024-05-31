@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../css/mainPage.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="../js/mainPageRating.js"></script>
-    <script src="../js/mainPageBook.js"></script>
+    <script  type="module" src="../js/mainPageBook.mjs"></script>
     <script src="../js/title.js"></script>
     <script src="../js/nav.js"></script>
 </head>
@@ -19,15 +19,13 @@
         <h1 class="main-title">책을건너</h1>
     </header>
     <nav class="nav">
-        <ul class="menu_left">
+        <ul class="menu_list">
             <li class="menu_item"><a>베스트셀러</a></li>
             <li class="menu_item"><a>스테디셀러</a></li>
-        </ul>
-        <ul class="menu_right">
             <li class="menu_item"><a>이달의 도서</a></li>
             <li class="menu_item"><a>도서 카테고리</a></li>
         </ul>
-        <hr class="nav_hr">
+        <hr>
     </nav>
     <div id="book-container" class="book-container"></div>
     <div id="today-book-container" class="today-book-container"></div>

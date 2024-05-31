@@ -1,4 +1,7 @@
-
+@font-face {
+    font-family: 'josefinsans';
+    src: url('../font/JosefinSans-Regular.ttf') format('truetype');
+}
 #book-container {
     overflow: hidden;
     display: flex;
@@ -26,6 +29,9 @@
     width: 400px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
+.article-title{
+    font-family: 'joseginsans';
+}
 #main-section {
     float: left;
     width: 710px;
@@ -34,9 +40,7 @@
     float: right;
     width: 200px;
 }
-/* .content-container>section{
-    background-color: #FDF3DA;
-} */
+
 .main-section>article, .main-section>article>.article-header,
 .main-section>article>.article-header>.article-title,.main-section>article>.article-body, 
 .main-section>article>.article-body>p,.main-section>article>.article-body>h3 {

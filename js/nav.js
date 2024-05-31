@@ -15,7 +15,7 @@ $(document).ready(function () {
                 item.href = '../html/thismonth.html';
                 break;
             case 3:
-                item.href = '../category.html';
+                item.href = '../html/category.html';
                 break;
             default:
                 console.log('Unknown menu item index:', index);
