@@ -2,6 +2,18 @@
 column-count:3;
 margin-top:10%;
 }
+/* 반응형 웹 디자인 */
+@media (max-width: 1200px) {
+  #columns {
+      column-count: 2; /* 화면이 1200px 이하일 때 컬럼 수를 2개로 설정 */
+  }
+}
+
+@media (max-width: 768px) {
+  #columns {
+      column-count: 1; /* 화면이 768px 이하일 때 컬럼 수를 1개로 설정 */
+  }
+}
 
 .content {
     overflow: hidden;

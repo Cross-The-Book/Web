@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     updateContent(allBookData);
 });
 
-function updateContent(allBookData) {
+export function updateContent(allBookData) {
     const contentContainer = document.querySelector('.book-container');
     contentContainer.innerHTML = '';
     if (!Array.isArray(allBookData)) {

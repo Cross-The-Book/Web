@@ -1,4 +1,5 @@
 import { allBookData } from "./books.js";
+import { updateContent } from "./categoryBooks.mjs";
 
 document.addEventListener('DOMContentLoaded', function () {
     setupSearchForm();
@@ -29,7 +30,7 @@ function searchBooks(event) {
     updateContent(filteredBooks);
 }
 
-function updateContent(allBookData) {
+/* function updateContent(allBookData) {
     const contentContainer = document.querySelector('.book-container');
     contentContainer.innerHTML = '';
     if (!Array.isArray(allBookData)) {
@@ -52,4 +53,4 @@ function updateContent(allBookData) {
         `;
         contentContainer.appendChild(div);
     });
-}
+} */
