@@ -1,36 +1,41 @@
 @font-face {
-    font-family: 'josefinsans-regular';
-    src: url(../font/JosefinSans-Regular.ttf) format('truetype');
-}
-@font-face {
     font-family: 'notosans';
     src: url(../font/NotoSansKR-Regular.ttf) format('truetype');
 }
-@font-face {
-    font-family: 'nanumpen';
-    src: url(../font/NanumPenScript-Regular.ttf) format(truetype);
-}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'notosans';
     background-color: #10222E;
-    color:#EFE8D6;
+    color: #EFE8D6;
 }
+
 a {
     text-decoration: none;
 }
+
 li {
     list-style: none;
-    color:#EFE8D6;
+    color: #EFE8D6;
+}
+
+p{
+    margin: 5px 0;
+}
+
+figcaption p {
+    background-color: rgba(0, 0, 0, 0);
 }
 
 footer {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* 수직 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
     background-color: #FDF3DA;
     padding: 10px 20px;
-    height: 60px; /* 푸터 높이를 60px로 설정 */
+    height: 60px;
+    /* 푸터 높이를 60px로 설정 */
 }

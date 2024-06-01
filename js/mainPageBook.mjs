@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function () {
 function updateContent(mainpage) {
     const contentContainer = document.getElementById('book-container');
     const todayBookContainer = document.getElementById('today-book-container')
-    contentContainer.innerHTML = ''; // 기존 내용을 초기화
+    contentContainer.innerHTML = '';
 
-    mainpage.forEach((book) => { // 여기서 'books' 배열을 순회합니다.
+    mainpage.forEach((book) => {
         const section = document.createElement('section');
         section.className = 'main-section';
 
@@ -37,7 +37,7 @@ function updateContent(mainpage) {
     todaySection.innerHTML = `
     <article class="today-book">
     <a href="../html/detail.html?book=${encodeURIComponent(JSON.stringify(mainpage[0]))}">
-            <img src="https://qi-b.qoo10cdn.com/partner/goods_image/9/9/3/7/349129937g.jpg" width="150" height="300">
+            <img src=${mainpage[0].img} width="150" height="300">
         </a>
         <div class="today-book-details">
             <div class="article-header">
