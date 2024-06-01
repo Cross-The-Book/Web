@@ -1,20 +1,36 @@
-$(document).ready(function() {
-    // master-title 클래스를 가진 요소 선택
+$(document).ready(function () {
     const masterTitleElement = document.querySelector('.main-title');
 
-    // 새로운 img 요소 생성
     const imgElement = document.createElement('img');
-    imgElement.src = '../crossthebook.png'; // 이미지의 소스 설정
-    imgElement.alt = '책을건너'; // 대체 텍스트 설정
+    imgElement.src = '../img/crossthebook.png';
+    imgElement.alt = '책을건너';
 
-    // 새로운 a 요소 생성
     const linkElement = document.createElement('a');
-    linkElement.href = '../html/mainPage.html'; // 링크할 페이지 설정
-
-    // img 요소를 a 요소 안에 넣기
+    linkElement.href = '../html/mainPage.html';
     linkElement.appendChild(imgElement);
 
-    // 기존 텍스트를 삭제하고 이미지 링크 삽입
-    masterTitleElement.innerHTML = ''; // 기존 내용을 비웁니다.
-    masterTitleElement.appendChild(linkElement); // 생성한 a 요소를 master-title 요소에 추가
+    masterTitleElement.innerHTML = '';
+    masterTitleElement.appendChild(linkElement);
+
+    //footer의 왼쪽 제목부분과 오른쪽 깃허브 아이콘부분에 하이퍼링크 설정
+    let leftDiv=document.querySelector('.footer-left');
+    let main=document.createElement('a');
+    main.href='../html/mainPage.html';
+    main.className='footer-link';
+    main.textContent=leftDiv.textContent;
+    leftDiv.textContent='';
+    leftDiv.appendChild(main);
+    let github = document.createElement('a');
+    
+    github.href = 'https://github.com/Cross-The-Book/Web';
+    github.target = '_blank';
+    
+    github.className='footer-link';
+
+    
+    let img = document.querySelector('.footer-right');
+    img.src='../img/github.png';
+    let parentRight=img.parentNode;
+    github.appendChild(img);
+    parentRight.appendChild(github);
 });

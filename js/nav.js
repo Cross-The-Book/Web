@@ -1,8 +1,7 @@
 $(document).ready(function () {
-    // menu_item 클래스에 해당하는 모든 요소를 선택합니다.
     const menuItems = document.querySelectorAll('.menu_item a');
 
-    // 각 메뉴 항목에 대해 href 속성을 설정합니다.
+    //각 네비게이션의 item에 하이퍼링크 설정
     menuItems.forEach((item, index) => {
         switch (index) {
             case 0:

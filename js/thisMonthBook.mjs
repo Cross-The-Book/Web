@@ -29,7 +29,7 @@ function updateBookDetails(selectedMonth) {
           <span> — 데이비드 니콜스(<원데이> 작가)</span>`,
         `매트 헤이그는 빛과 어둠을 가진 인간 존재에 대해 깊이 공감하고, 이 탁월한 이야기에 그의 모든 재능을 쏟아냈다.<br><br>
           <span> — 게이먼(<북유럽 신화> 작가)</span>`],
-      author_image: "https://blog.kakaocdn.net/dn/crjZSI/btqC3O2JbzR/1RRAWcW4WZNijrHnrpfvbk/img.jpg",
+      author_image: "../img/매트헤이그.jpg",/* "https://blog.kakaocdn.net/dn/crjZSI/btqC3O2JbzR/1RRAWcW4WZNijrHnrpfvbk/img.jpg", */
       author_des: `영국의 유명한 소설가이자 작가로 그의 작품은 일반 소설뿐만 아니라 어린이 책과 자기계발서 등 다양한 장르에서도 큰 인기를 얻고 있습니다. 1975년 7월 3일에 태어난 매트 헤이그는 
             특히 인간의 삶, 정신 건강, 그리고 인간 존재의 심오한 가치에 대한 탐구를 자신의 작품을 통해 꾸준히 진행해왔습니다. 매트 헤이그의 작품들은 그의 깊은 인간 이해와 유머, 
             그리고 따뜻한 시선으로 인간 조건에 대한 이야기를 풀어내며, 세계 곳곳의 독자들로부터 큰 공감을 얻고 있습니다. 그는 현재까지도 활발히 작품 활동을 이어가고 있으며, 
@@ -57,7 +57,7 @@ function updateBookDetails(selectedMonth) {
           독고 씨의 변신은 어쩌면 덜 놀라운 사실이다. 독고 씨의 진짜 재능은 많은 사람을 너끈히 
           구할 수 있는 눈물겹도록 따스한 마음이기에.<br><br>
           <span> — 정여울 (『1일 1페이지 세상에서 가장 짧은 심리수업 365』 저자)</span>`],
-      author_image: "https://image.yes24.com/momo/TopCate3613/MidCate006/361251918.JPG",
+      author_image:"../img/김호연작가.jpg", /* "https://image.yes24.com/momo/TopCate3613/MidCate006/361251918.JPG", */
       author_des: `김호연 작가는 주로 현대 사회의 일상과 인간관계에 대해 섬세하고 따뜻한 시선으로 바라보며 그려내는 작가로 알려져 있습니다. 
             "불편한 편의점"은 사회의 다양한 구성원들이 모여 서로의 삶과 꿈, 아픔을 공유하며 성장해 가는 과정을 통해, 일상 속에서도 변화와 성장의 기회가 있다는 
             희망적인 메시지를 전달합니다. 이 작품을 통해 김호연 작가는 일상적인 공간에서 벌어지는 소소한 이야기 속에 깊은 인간애와 따뜻한 위로를 담아내며 

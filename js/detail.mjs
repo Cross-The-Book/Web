@@ -1,14 +1,23 @@
 import { allBookData } from "./books.js";
 const urlParams = new URLSearchParams(window.location.search);
-const bookData = JSON.parse(decodeURIComponent(urlParams.get('book')));
+
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log(bookData);
-    updateTag(bookData);
-    updateContent(bookData);
-    recommendBook(allBookData);
-    clickButton();
-
+    try {
+        const bookParam = urlParams.get('book');
+        if (!bookParam) {
+            throw new Error('Book parameter is missing');
+        }
+        console.log(bookParam);
+        const bookData = JSON.parse(bookParam);
+        console.log(bookData);
+        updateTag(bookData);
+        updateContent(bookData);
+        recommendBook(allBookData);
+        clickButton();
+    } catch (e) {
+        console.error('Error decoding book data:', e);
+    }
 });
 
 function updateContent(bookdata) {
@@ -18,21 +27,20 @@ function updateContent(bookdata) {
     showStar(bookdata.rating);
     document.getElementById('sale_price').textContent = bookdata.price;
     document.getElementById('table_content').innerHTML = bookdata.index;
-    console.log(bookdata.index);
     document.querySelector('.story').innerHTML = bookdata.story;
     document.getElementById('publisher_review').innerHTML = bookdata.publisherReview;
     document.querySelector('.video').src = bookdata.video;
 }
-function updateTag(bookdata){
-  var ul = document.querySelector('.tag_list');
-  ul.innerHTML = '';
+function updateTag(bookdata) {
+    var ul = document.querySelector('.tag_list');
+    ul.innerHTML = '';
 
-  bookdata.tag.forEach(function(tag) {
-    var li = document.createElement('li');
-    li.className = 'tag_item';
-    li.textContent = tag;
-    ul.appendChild(li);
-  });
+    bookdata.tag.forEach(function (tag) {
+        var li = document.createElement('li');
+        li.className = 'tag_item';
+        li.textContent = tag;
+        ul.appendChild(li);
+    });
 }
 function recommendBook(allBookData) {
     const randomIndices = new Set();
@@ -44,7 +52,6 @@ function recommendBook(allBookData) {
     recommendContent.innerHTML = '';
 
     randomIndices.forEach(recommend => {
-        console.log(recommend);
         const bookDiv = document.createElement('div');
         bookDiv.innerHTML = `<a href="../html/detail.html?book=${encodeURIComponent(JSON.stringify(allBookData[recommend]))}">
         <img src="${allBookData[recommend].img}" alt="어떻게 살 것인가"><a>
@@ -112,5 +119,3 @@ function clickButton() {
         alert('구매 버튼이 클릭되었습니다!');
     });
 }
-
-export const rating = bookData.rating

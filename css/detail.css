@@ -1,14 +1,7 @@
-p{
-    margin: 5px 0;
-}
-
-a{
-    text-decoration: none;
-}
-
 #book_image{
     position:relative;
 }
+
 #rating_text, #price_text, #sale_price{
     display: inline-block;
     margin-right: 20px;
@@ -27,10 +20,12 @@ a{
     font-size: 1.5em;
     font-weight: bold;
 }
+
 #rating span {
     margin: 0;
     padding: 0;
 }
+
 #price {
     margin-top:40px;
     margin-bottom: 40px;
@@ -38,20 +33,21 @@ a{
 
 #buyButton {
     display: block;
-    margin: 80px auto; /* 상하 20px, 좌우 auto로 가운데 정렬 */
-    padding: 15px 50px; /* 버튼의 패딩을 늘려서 크기를 키움 */
+    margin: 80px auto; 
+    padding: 15px 50px;
     font-size: 16px;
-    background-color: #000; /* 배경색을 검은색으로 설정 */
-    color: #fff; /* 글자색을 흰색으로 설정 */
+    background-color: #000;
+    color: #fff; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-align: center; /* 텍스트를 가운데 정렬 */
+    text-align: center;
 }
 
 #buyButton:hover {
-    background-color: #333; /* 호버 시 배경색을 조금 더 밝게 */
+    background-color: #333; 
 }
+
 #table, #story{
     display: block;
     width: 60%;
@@ -65,18 +61,20 @@ a{
 }
 
 #table_content{
-    line-height: 1.5; /* 줄 간격 설정 */
+    line-height: 1.5;
     margin:0;
     text-indent:0;
     padding-left:0;
 }
+
 #story > p{
-    line-height: 1.8; /* 줄 간격 설정 */
+    line-height: 1.8;
     margin:0;
     text-indent:0;
     padding-left:0;
     margin-bottom: 50px;
 }
+
 #publisher_review{
     border:1px solid #526D82;
     background-color: #526D82;
@@ -94,26 +92,25 @@ a{
     margin-bottom: 20px;
 }
 
-/* 섹션 스타일 */
 .section {
     display: flex;
-    flex-direction: column; /* 자식 요소들을 세로 방향으로 나열 */
-    align-items: center; /* 가로 방향으로 중앙 정렬 */
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
     width: 90%;
     margin:0 auto;
 }
 
 .book_image img {
-    display: block; /* 이미지가 블록 요소로 취급되도록 설정 */
-    width: 100%; /* 이미지가 컨테이너의 너비를 채우도록 설정 */
-    height: auto; /* 이미지의 높이가 비율에 맞게 조정되도록 설정 */
+    display: block; 
+    width: 100%;
+    height: auto; 
 }
 
 .book_content {
     display: flex;
-    align-items: flex-start; /* 이미지와 텍스트가 상단에서 정렬되도록 */
-    margin-top: 100px; /* 상단 여백 추가 */
+    align-items: flex-start;
+    margin-top: 100px; 
 }
 
 /* 이미지와 설명 부분을 나누기 위한 스타일 */
@@ -139,7 +136,7 @@ a{
 .box_tag{
     margin-bottom: 30px;
 }
-/* 태그 리스트 스타일 - 리스트 스타일 제거 */
+
 .tag_list {
     list-style: none;
     padding: 0;
@@ -170,6 +167,7 @@ a{
     text-align:center;
     margin-bottom: 50px;
 }
+
 .book_des_hr {
     position: absolute;
     margin-top:50px;
@@ -178,15 +176,16 @@ a{
     box-shadow: 0px 3px 7px grey;
     transform: translateX(-50%);
 }
-/* 밑줄을 추가하기 위한 클래스 */
+
 .active {
     text-decoration: underline;
 }
+
 .lists_wrapper{
     width: 100%;
 }
+
 .lists {
-    /* margin-top: 90px; */ /* 상단 여백 추가 */
     width: 100%; 
     height: 60px;
     top: 0;
@@ -194,18 +193,15 @@ a{
     transition: all 0.5s;
     position: relative;
 }
+
 .lists > ul {
     margin-left: 250px;
     padding:0;
     list-style: none;
     display: flex;
     flex-direction: row;
-   /*  list-style: none;
-    margin-left: 250px;
-    display: flex;
-    flex-wrap: wrap;
-    float: left; */
 }
+
 .fixed-nav{
     position: fixed;
     top:0;
@@ -226,14 +222,9 @@ a{
 
 .table_content_p{
     margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
 }
-
-/* #publisher_review{
-    line-height: 1.5;
-    margin:0;
-    text-indent:0;
-    padding-left:0;
-} */
 
 .table_hr{
     position: absolute;
@@ -245,8 +236,8 @@ a{
 }
 
 .summary_video {
-    display: flex; /* flexbox 레이아웃 사용 */
-    justify-content: center; /* 가운데 정렬 */
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
 }
 
@@ -264,15 +255,15 @@ a{
 }
 
 .recommend_book_item{
-    display: inline-block; /* 가로로 나열 */
-    margin: 0 20px; /* 책 사이의 간격 */
-    text-align: center; /* 이미지와 텍스트 중앙 정렬 */
+    display: inline-block;
+    margin: 0 20px;
+    text-align: center;
     width: 300px;
 }
 
 .recommend_book_item img{
-    width: 200px; /* 이미지 크기 조정, 필요에 따라 조정 */
-    height: auto;
+    width: 200px;
+    height: 250px;
 }
 
 .recommend_book_item p{

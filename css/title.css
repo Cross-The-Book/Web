@@ -1,4 +1,8 @@
-/* 헤더 스타일 */
+@font-face {
+    font-family: 'nanumpen';
+    src: url(../font/NanumPenScript-Regular.ttf) format(truetype);
+}
+
 .header .main {
     text-align: center;
     font-size: 24px;
@@ -32,23 +36,40 @@
 
 .nav>hr {
     position: relative;
-    margin-top: 60px; /* 원하는 만큼의 값을 입력하세요 */
+    margin-top: 60px; 
     bottom: 0;
     left: 0;
     width: 100%;
-    border: none; /* 기본 border 제거 */
-    border-top: 2px solid #C4BEA4; /* 원하는 스타일로 재정의 */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9); /* offsetY 값을 크게 하고, 알파 값을 높임 */
+    border: none;
+    border-top: 2px solid #C4BEA4; 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.9); 
 }
+
 .main-title {
     font-size: 30px;
     color: #181818;
     text-align: center; 
 }
-.footer-left, .footer-right {
-    font-size: 16px;
-    margin-left: 100px;
+
+.footer-left{
+    background-color: #FDF3DA;
+    
+    
+     margin-left: 100px;
     margin-right: 100px;
+}
+
+.footer-link{
     background-color: #FDF3DA;
     color: #10222E;
+    color: #10222E;
+    font-family: 'nanumpen';
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.footer-right {
+    width: 50px;
+    margin-right: 100px;
+    background-color: #FDF3DA;
 }

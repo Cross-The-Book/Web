@@ -24,6 +24,8 @@ const rankingsData = {
 document.addEventListener('DOMContentLoaded', function () {
     const yearSelect = document.getElementById('year-select');
     const weekSelect = document.getElementById('week-select');
+
+    //연도나 주의 옵션을 변경했을 때 내용을 다르게함
     yearSelect.addEventListener('change', function () {
         const selectedYear = yearSelect.value;
         const selectedWeek = weekSelect.value;
