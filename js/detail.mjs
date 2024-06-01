@@ -54,7 +54,7 @@ function recommendBook(allBookData) {
     randomIndices.forEach(recommend => {
         const bookDiv = document.createElement('div');
         bookDiv.innerHTML = `<a href="../html/detail.html?book=${encodeURIComponent(JSON.stringify(allBookData[recommend]))}">
-        <img src="${allBookData[recommend].img}" alt="어떻게 살 것인가"><a>
+        <img src="${allBookData[recommend].img}" alt="추천도서 이미지"><a>
                     <p>${allBookData[recommend].title}</p>
         `;
         bookDiv.classList.add('recommend_book_item');
@@ -106,7 +106,6 @@ function showStar(rating) {
             starsContainer.appendChild(star);
         }
     }
-
 
     // 평점 표시 함수 실행
     displayRating(ratingValue);
